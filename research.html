@@ -6,6 +6,14 @@
   
 <link rel="stylesheet" href="style.css">
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("table.pubs").forEach(function (t) {
+      t.style.counterReset = "pub " + (t.querySelectorAll("tr.pub-title").length + 1);
+    });
+  });
+</script>
+
 <script src="mathjax-config.js" defer></script>
 <script type="text/javascript" id="MathJax-script" defer
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
@@ -116,7 +124,7 @@
     </b>
     <br><br>
     
-    <table class="center" style="text-align: left; vertical-align: middle;" border="1" cellpadding="2" cellspacing="2">
+    <table class="center pubs" style="text-align: left; vertical-align: middle;" border="1" cellpadding="2" cellspacing="2">
         <tr>
 
             <td style="width: 1000px;">Title</td>
@@ -125,7 +133,7 @@
 
         </tr>
 
-        <tr>
+        <tr class="pub-title">
           <td>
             Small undecidable groups and unrecognizable 4-manifolds
           </td>
@@ -148,7 +156,7 @@
           </td>
         </tr>
 
-        <tr>
+        <tr class="pub-title">
           <td>
             The $\mathrm{FK}_3$ knot polynomial
           </td>
@@ -169,7 +177,7 @@
           </td>
         </tr>
 
-        <tr>
+        <tr class="pub-title">
           <td>
             Trisection invariants of 4-manifolds are uncomputable
           </td>
@@ -189,7 +197,7 @@
           </td>
         </tr>
 
-        <tr>
+        <tr class="pub-title">
           <td>
             Positivity and log concavity of the Links--Gould polynomial of knots 
           </td>
@@ -212,7 +220,7 @@
                 doi:10.7910/DVN/DKJ84O (Harvard Dataverse)</a>.
         </tr>
 
-        <tr>
+        <tr class="pub-title">
           <td>
             Fixed-parameter tractable computation of Reshetikhin--Turaev knot polynomials via tensor networks
           </td>
@@ -233,7 +241,7 @@
                 arXiv:2606.29662 </a>.
         </tr>
       
-        <tr>
+        <tr class="pub-title">
           <td>
                 The complete 10-tetrahedra census of orientable cusped hyperbolic 3-manifolds
           </td>
@@ -259,7 +267,7 @@
                 doi:10.7910/DVN/BFEXZA (Harvard Dataverse)</a>.
         </tr>
 
-        <tr>
+        <tr class="pub-title">
           <td>
                  Patterns of the \(V_2\)-polynomial of knots
           </td>
@@ -296,7 +304,7 @@
         </tr>
       
       
-        <tr>
+        <tr class="pub-title">
             <td>
                  Algebraic aspects of holomorphic quantum modular forms
             </td>

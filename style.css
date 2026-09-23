@@ -44,3 +44,25 @@ table.center {
         font-size: 18pt;
     }
 }
+
+/* Numbered publication list */
+/* Counts down; the start value (papers + 1) is also set automatically by the script in research.html */
+table.pubs {
+    counter-reset: pub 9;
+}
+
+table.pubs tr.pub-title {
+    counter-increment: pub -1;
+}
+
+table.pubs td:first-child {
+    position: relative;
+    padding-left: 2.4em;
+}
+
+table.pubs tr.pub-title td:first-child::before {
+    content: "[" counter(pub) "]";
+    position: absolute;
+    left: 0.4em;
+    font-weight: normal;
+}
